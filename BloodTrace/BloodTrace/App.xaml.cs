@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BloodTrace.Pages;
+using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -11,7 +12,19 @@ namespace BloodTrace
         {
             InitializeComponent();
 
-            MainPage =  new NavigationPage(new SignInPage());
+            
+
+            //MainPage =  new NavigationPage(new SignInPage());
+            if (!string.IsNullOrEmpty(Models.Settings.AccessToken))
+            {
+                MainPage =  new NavigationPage(new HomePage());
+            }
+
+            else if(string.IsNullOrEmpty(Models.Settings.UserName)&& string.IsNullOrEmpty(Models.Settings.Passsword))
+                {
+
+                MainPage = new NavigationPage(new SignInPage());
+            }
         }
         
         protected override void OnStart()

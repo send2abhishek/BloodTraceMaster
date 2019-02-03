@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using BloodTrace.Models;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 
 namespace BloodTrace.Services
 {
@@ -46,7 +47,13 @@ namespace BloodTrace.Services
             var resposne = await httpClient.SendAsync(request);
 
             //to read the response from the server
-            var content = resposne.Content.ReadAsStringAsync();
+            var content = await resposne.Content.ReadAsStringAsync();
+            //dynamic keyword used to get the data at runtime 
+            JObject jobject= JsonConvert.DeserializeObject<dynamic>(content);
+            var accessToken=jobject.Value<string>("access_token");
+            Settings.AccessToken = accessToken;
+            Settings.UserName = email;
+            Settings.Passsword = password;
             return resposne.IsSuccessStatusCode;
         }
 

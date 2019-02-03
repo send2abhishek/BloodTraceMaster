@@ -15,10 +15,12 @@
 
             <StackLayout Grid.Row="1" Margin="40,40,40,0">
 
-                <Entry Placeholder="Email" PlaceholderColor="#707070" x:Name="RgtEmail" />
+                <Entry Placeholder="Email" PlaceholderColor="#707070" x:Name="RgtEmail" Focused="RgtEmail_Focused" />
                 <Entry Placeholder="password" PlaceholderColor="#707070" x:Name="RgtPassword" IsPassword="True" />
                 <Entry Placeholder="Confirm password" PlaceholderColor="#707070" x:Name="RgtCPassword" IsPassword="True" />
                 <Button Text="Register" BackgroundColor="#C62729" TextColor="White" x:Name="btnRegister" Clicked="BtnRegister_Clicked" />
+
+               
             </StackLayout>
 
             
