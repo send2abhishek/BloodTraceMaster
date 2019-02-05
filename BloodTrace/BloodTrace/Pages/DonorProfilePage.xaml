@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BloodTrace.Pages.DonorProfilePage">
+    <ContentPage.Content>
+        <AbsoluteLayout>
+            <BoxView BackgroundColor="#E96950" AbsoluteLayout.LayoutBounds="0,0,1,0.3" AbsoluteLayout.LayoutFlags="All" />
+
+            
+            <Image  x:Name="ImgDonor" AbsoluteLayout.LayoutBounds="0.5,0.2,0.3,0.3" AbsoluteLayout.LayoutFlags="All" />
+            <Label x:Name="LblDonorName" HorizontalTextAlignment="Center" AbsoluteLayout.LayoutBounds="0.5,0.5,0.3,0.2" AbsoluteLayout.LayoutFlags="All" />
+
+            <StackLayout BackgroundColor="#F5F5F5" Padding="8,2,0,0" AbsoluteLayout.LayoutBounds="0,0.6,1,0.1" AbsoluteLayout.LayoutFlags="All">
+
+                <Label Text="Blood Group" TextColor="#707070" />
+                <Label x:Name="lblBloodGroup"  TextColor="Black" />
+
+
+            </StackLayout>
+
+            <StackLayout BackgroundColor="#F5F5F5" Padding="8,2,0,0" AbsoluteLayout.LayoutBounds="0,0.75,1,0.1" AbsoluteLayout.LayoutFlags="All">
+
+                <Label Text="Country" TextColor="#707070" />
+                <Label x:Name="lblCountry"  TextColor="Black"/>
+
+
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal" BackgroundColor="#F5F5F5" Padding="8,2,0,0" AbsoluteLayout.LayoutBounds="0,0.9,1,0.1" AbsoluteLayout.LayoutFlags="All">
+
+                <Image Source="call.png" HorizontalOptions="Center" />
+                <Image Source="email.png" HorizontalOptions="EndAndExpand" />
+
+
+
+            </StackLayout>
+
+        </AbsoluteLayout>
+    </ContentPage.Content>
+</ContentPage>

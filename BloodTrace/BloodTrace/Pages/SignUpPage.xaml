@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BloodTrace.Pages.SignUpPage">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                
+            </Grid.RowDefinitions>
+
+            <Image Grid.Row="0" Margin="0,40,0,0" HeightRequest="200" WidthRequest="200" Source="bloodlogo.png" />
+
+            <StackLayout Grid.Row="1" Margin="40,40,40,0">
+
+                <Entry Placeholder="Email" PlaceholderColor="#707070" x:Name="RgtEmail" Focused="RgtEmail_Focused" />
+                <Entry Placeholder="password" PlaceholderColor="#707070" x:Name="RgtPassword" IsPassword="True" />
+                <Entry Placeholder="Confirm password" PlaceholderColor="#707070" x:Name="RgtCPassword" IsPassword="True" />
+                <Button Text="Register" BackgroundColor="#C62729" TextColor="White" x:Name="btnRegister" Clicked="BtnRegister_Clicked" />
+
+               
+            </StackLayout>
+
+            
+
+
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
